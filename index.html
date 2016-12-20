@@ -17,7 +17,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Six Speed</a>
+          <a class="navbar-brand" href="#">Speed comparison</a>
         </div>
 
         <div class="collapse navbar-collapse" id="main-navbar">
@@ -32,7 +32,7 @@
             </ul>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://github.com/fhinkel/six-speed">Fork me on GitHub</a></li>
+            <li><a href="https://github.com/natorion/speed-comparison">Fork me on GitHub</a></li>
           </ul>
         </div>
       </div>
@@ -40,15 +40,16 @@
 
     <div class="container-fluid initial-hide">
     <table>
-      <caption>Performance of ES6 features relative to the ES5 baseline operations per second.</caption>
+      <caption>Performance of JavaScript patterns compared to their alternatives</caption>
       <thead>
         <tr>
           <td colspan="2"></td>
-            <th class="browser-first js-family-v8 js-version-stable" colspan="1">node</th>
+            <th class="browser-first js-family-v8 js-version-stable js-version-stable" colspan="2">node</th>
         </tr>
         <tr>
           <td colspan="2"></td>
               <th class="browser-first js-family-v8 js-version-stable">4.2.2</th>
+              <th class=" js-family-v8 js-version-stable">6.8.0</th>
         </tr>
       </thead>
 
@@ -56,11 +57,12 @@
             <tr class="feature-row" id="test-array_delete">
                 <th rowspan="1">
                   array delete
-                  <a class="test-link" href="https://github.com/fhinkel/six-speed/tree/master/tests/array_delete">tests</a>
+                  <a class="test-link" href="https://github.com/natorion/speed-comparison/tree/master/tests/array_delete">tests</a>
                 </th>
               <th class="js-impl-es6">es6</th>
 
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">2.1x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster">2.3x faster</td>
             </tr>
       </tbody>
     </table>
@@ -73,16 +75,9 @@
 
       <div class="panel-body">
         <p>
-          Run on 12/20/2016 using babel 6.21.0, babel-runtime 6.20.0, and traceur 0.0.108.
-        </o>
-        <p>
-          For each of the ES6 features in question, a ES5 implementation of that functionality was written along with a ES6 version. It should be noted that the functionality is frequently the same, but in some cases the "common" vs. "correct" version was written, i.e. using <code>x[key] = value</code> vs. <code>defineProperty</code> which is faster but can be hit but a particular nasty edge case for those who deem it fun to extend <code>Object.prototype</code>.
-        </p>
-        <p>
-          Babel, in both loose+runtime and runtime mode, and Traceur were then used to compile the ES6 version to a ES5 compliant version, utilizing the runtime over polyfill to maintain test isolation and avoid native implementations where possible.
-        </p>
-        <p>
-          All of these test instances were then benchmarked in the given JavaScript engine using <a href="https://benchmarkjs.com/">Benchmark.js</a> and then the operations per second compared to the ES5 implementation. Cross browser and cross execution comparisions are avoided as much as possible to isolate environmental issues when executing on VMs in the cloud. <code>Identical</code> indicates that the tested implementation was +/- 10% of the ES5 implementation.
+          A slow JavaScript pattern is compared to faster alternatives. ES5 is
+          always the slow one. ES6 is the alternative. Why the strange naming? 
+          The test driver was forked from the six-speed benchmark.
         </p>
       </div>
     </div>

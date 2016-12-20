@@ -44,12 +44,11 @@
       <thead>
         <tr>
           <td colspan="2"></td>
-            <th class="browser-first js-family-v8 js-version-stable js-version-stable" colspan="2">node</th>
+            <th class="browser-first js-family-v8 js-version-stable" colspan="1">node</th>
         </tr>
         <tr>
           <td colspan="2"></td>
-              <th class="browser-first js-family-v8 js-version-stable">4.2.2</th>
-              <th class=" js-family-v8 js-version-stable">6.8.0</th>
+              <th class="browser-first js-family-v8 js-version-stable">6.8.0</th>
         </tr>
       </thead>
 
@@ -59,10 +58,18 @@
                   array delete
                   <a class="test-link" href="https://github.com/natorion/speed-comparison/tree/master/tests/array_delete">tests</a>
                 </th>
-              <th class="js-impl-es6">es6</th>
+              <th class="js-impl-faster">faster</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">2.1x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster">2.3x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-faster test-faster browser-first">2.2x faster</td>
+            </tr>
+            <tr class="feature-row" id="test-property_removal">
+                <th rowspan="1">
+                  property removal
+                  <a class="test-link" href="https://github.com/natorion/speed-comparison/tree/master/tests/property_removal">tests</a>
+                </th>
+              <th class="js-impl-faster">faster</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-faster test-faster browser-first">1.8x faster</td>
             </tr>
       </tbody>
     </table>
@@ -76,7 +83,7 @@
       <div class="panel-body">
         <p>
           A slow JavaScript pattern is compared to faster alternatives. ES5 is
-          always the slow one. ES6 is the alternative. Why the strange naming? 
+          always the slow one. "faster" is the alternative. Why the strange naming? 
           The test driver was forked from the six-speed benchmark.
         </p>
       </div>
@@ -91,7 +98,7 @@
     </noscript>
 
     <script>
-      var REPORT_DATA = {"engines":[{"name":"Stable","selector":"js-version-stable"},{"dash":true},{"name":"V8","selector":"js-family-v8"}],"implementations":[{"name":"es6","selector":"js-impl-es6"}]};
+      var REPORT_DATA = {"engines":[{"name":"Stable","selector":"js-version-stable"},{"dash":true},{"name":"V8","selector":"js-family-v8"}],"implementations":[{"name":"faster","selector":"js-impl-faster"}]};
     </script>
 
     <script src="report.js"></script>

@@ -1,47 +1,42 @@
 {
   "node": {
-    "4.x": {
-      "stats": {
-        "array_delete": {
-          "supportsES6": true,
-          "baseline": 4277.715356078885,
-          "relative": {
-            "es6": 2.093365481804528
-          },
-          "raw": {
-            "es6": 8954.821667400704
-          },
-          "elapsed": {
-            "es5": 5.586,
-            "es6": 5.62
-          },
-          "count": {
-            "es5": 383,
-            "es6": 739
-          },
-          "errors": {}
-        }
-      },
-      "version": "4.2.2"
-    },
     "6.x": {
       "stats": {
         "array_delete": {
-          "supportsES6": true,
-          "baseline": 6353.823939962126,
+          "supportsES6": false,
+          "baseline": 5426.790629106361,
           "relative": {
-            "es6": 2.280096309547191
+            "faster": 2.2254719645862577
           },
           "raw": {
-            "es6": 14487.330517020235
+            "faster": 12077.170402755626
           },
           "elapsed": {
-            "es5": 5.394,
-            "es6": 5.579
+            "es5": 5.379,
+            "faster": 5.492
           },
           "count": {
-            "es5": 345,
-            "es6": 760
+            "es5": 344,
+            "faster": 746
+          },
+          "errors": {}
+        },
+        "property_removal": {
+          "supportsES6": false,
+          "baseline": 5909.4539361540665,
+          "relative": {
+            "faster": 1.7826135763585989
+          },
+          "raw": {
+            "faster": 10534.272815454
+          },
+          "elapsed": {
+            "es5": 5.339,
+            "faster": 5.346
+          },
+          "count": {
+            "es5": 329,
+            "faster": 579
           },
           "errors": {}
         }

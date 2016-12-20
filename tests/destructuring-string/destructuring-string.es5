@@ -1,9 +1,0 @@
-var data = 'hello';
-
-function fn() {
-  var a = data[0];
-  return a;
-}
-
-assertEqual(fn(), 'h');
-test(fn);

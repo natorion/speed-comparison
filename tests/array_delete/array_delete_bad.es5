@@ -1,0 +1,20 @@
+function fn() {
+  let foo = {};
+  foo["first"]= "1";
+  foo["second"] = "2";
+  foo["third"] = "3";
+  delete foo["second"];
+
+  let buffer = new Array(10000);
+
+  for (let i = 0; i < 10000; i++) {
+      buffer.push(foo["third"]); //interestingly foo.get("third") is slower than even the array
+  }
+
+  return buffer.length;
+}
+assertEqual(fn(), 20000);
+
+test(function() {
+  fn();
+});

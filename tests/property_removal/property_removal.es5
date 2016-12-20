@@ -1,0 +1,17 @@
+function fn() {
+  let foo = {first:"1", second:"2", third:"3"};
+  delete foo.second;
+
+  let buffer = new Array(10000);
+
+  for (let i = 0; i < 10000; i++) {
+      buffer.push(foo.third);
+  }
+
+  return buffer.length;
+}
+assertEqual(fn()>= 10000, true);
+
+test(function() {
+  fn();
+});

@@ -1,7 +1,7 @@
 {
   "name": "es6-perf",
   "version": "0.0.0",
-  "homepage": "https://github.com/fhinkel/six-speed",
+  "homepage": "https://github.com/natorion/speed-comparison",
   "authors": [
     "fhinkel <franziska.hinkelmann@gmail.com>"
     "kpdecker <kpdecker@gmail.com>"
